@@ -1,161 +1,168 @@
 .sign-in-container {
-    display: flex;
-    height: 100vh;
-    background-color: #A0ACF2; // Azul claro como fundo principal
+  display: flex;
+  height: 100vh;
+  background-color: #f5f5f5;
+  font-family: 'Arial', sans-serif;
+}
+
+.left-section {
+  flex: 1;
+  background: linear-gradient(to bottom, rgba(114, 94, 242, 0.8), rgba(145, 119, 242, 0.8)), url('/assets/backgroud.jpeg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 40px;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
   }
-  
-  .left-section {
-    flex: 1;
-    background-image: url('/assets/backgroud.jpeg');
-    background: linear-gradient(to bottom, rgba(114, 94, 242, 0.8), rgba(145, 119, 242, 0.8)), url('/assets/backgroud.jpeg'); // Gradiente sobre a imagem
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 40px;
-  
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-  
-    p {
-      font-size: 1.2rem;
-      opacity: 0.8;
-    }
+
+  p {
+    font-size: 1.2rem;
+    opacity: 0.9;
   }
-  
-  .right-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-  }
-  
-  .sign-in-form {
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: white;
-  
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      text-align: center;
-      color: #725EF2; // Roxo escuro para o título
-    }
-  }
-  
-  .form-group {
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.sign-in-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: white;
+
+  h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
-  
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-      color: #725EF2; // Roxo escuro para os labels
-    }
-  
-    input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 1rem;
-      color: #725EF2; // Roxo escuro para o texto dos inputs
-  
-      &:focus {
-        border-color: #9177F2; // Roxo claro ao focar
-        outline: none;
-      }
-    }
+    text-align: center;
+    color: #725EF2;
   }
-  
-  button {
+}
+
+.form-group {
+  margin-bottom: 20px;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #725EF2;
+  }
+
+  input {
     width: 100%;
     padding: 10px;
-    background-color: #725EF2; // Roxo escuro para o botão
-    color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #725EF2;
+
+    &:focus {
+      border-color: #9177F2;
+      outline: none;
+    }
+  }
+
+  .error-message {
+    color: #ff0000;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #725EF2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #9177F2;
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+.social-login {
+  text-align: center;
+  margin-top: 20px;
+
+  p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
     border: none;
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  
-    &:hover {
-      background-color: #9177F2; // Roxo claro ao passar o mouse
+
+    fa-icon {
+      margin-right: 10px;
     }
-  
-    &:disabled {
-      background-color: #ccc;
-      cursor: not-allowed;
-    }
-  }
-  
-  .social-login {
-    text-align: center;
-    margin-top: 20px;
-  
-    p {
-      margin-bottom: 10px;
-      font-size: 0.9rem;
-      color: #666;
-    }
-  
-    button {
-      display: flex;
-      background-color: #9177F2;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-  
-      fa-icon {
-        margin-right: 10px;
-      }
-  
-      &.google-btn {
-        background-color: #db4437; // Vermelho do Google
-        color: white;
-  
-        &:hover {
-          background-color: darken(#db4437, 10%);
-        }
-      }
-  
-      &.facebook-btn {
-        background-color: #1877f2; // Azul do Facebook
-        color: white;
-  
-        &:hover {
-          background-color: darken(#1877f2, 10%);
-        }
-      }
-    }
-  }
-  
-  .sign-up-link {
-    text-align: center;
-    margin-top: 20px;
-  
-    a {
-      color: #725EF2; // Roxo escuro para o link
-      text-decoration: none;
-      font-weight: bold;
-  
+
+    &.google-btn {
+      background-color: #db4437;
+      color: white;
+
       &:hover {
-        text-decoration: underline;
+        background-color: darken(#db4437, 10%);
+      }
+    }
+
+    &.facebook-btn {
+      background-color: #1877f2;
+      color: white;
+
+      &:hover {
+        background-color: darken(#1877f2, 10%);
       }
     }
   }
+}
+
+.sign-up-link {
+  text-align: center;
+  margin-top: 20px;
+
+  a {
+    color: #725EF2;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
