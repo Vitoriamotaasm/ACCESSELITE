@@ -1,21 +1,21 @@
 .sign-in-container {
+  
+  width: 100%;
   display: flex;
   height: 100vh;
   background-color: #f5f5f5;
   font-family: 'Arial', sans-serif;
+  
 }
 
 .left-section {
   flex: 1;
-  background: linear-gradient(to bottom, rgba(114, 94, 242, 0.8), rgba(145, 119, 242, 0.8)), url('/assets/backgroud.jpeg') no-repeat center center;
+  background-image: url(https://i.pinimg.com/736x/3f/83/65/3f83655de2643570c96d89f279c7746e.jpg);
   background-size: cover;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  
 
   h1 {
     font-size: 2.5rem;
@@ -34,7 +34,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background: linear-gradient(135deg, #89EBF6, #8EF8F8);
 }
 
 .sign-in-form {
@@ -44,12 +44,12 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   background-color: white;
-
+  
   h2 {
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
-    color: #725EF2;
+    color: #000000;
   }
 }
 
@@ -60,19 +60,21 @@
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #725EF2;
+    color: #7EC4EC;
+    border-color: #7EC4EC;
   }
 
   input {
-    width: 100%;
+    width: 95%;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid;
+    border-radius: 7px;
     font-size: 1rem;
-    color: #725EF2;
-
+    color: #7EC4EC;
+    justify-content: center;
+    
     &:focus {
-      border-color: #9177F2;
+      border-color: #8EF8F8;
       outline: none;
     }
   }
@@ -87,20 +89,20 @@
 button {
   width: 100%;
   padding: 10px;
-  background-color: #725EF2;
-  color: white;
-  border: none;
+  background-color: #7EC4EC;
+  color: #ffffff;
+  border-color: #7EC4EC;
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #9177F2;
+    background-color: #8EF8F8;
   }
 
   &:disabled {
-    background-color: #ccc;
+    background-color: #7EC4EC;
     cursor: not-allowed;
   }
 }
@@ -108,6 +110,8 @@ button {
 .social-login {
   text-align: center;
   margin-top: 20px;
+  margin: 10px;
+  justify-content: space-evenly;
 
   p {
     margin-bottom: 10px;
@@ -115,54 +119,46 @@ button {
     color: #666;
   }
 
+  .social-buttons {
+    display: flex;
+    gap: 10px; 
+    justify-content: center;
+  }
+
   button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    flex: 1; 
     padding: 10px;
-    margin-bottom: 10px;
-    border: none;
+    border: 1px solid #ddd; 
     border-radius: 4px;
     font-size: 1rem;
+
     cursor: pointer;
     transition: background-color 0.3s ease;
+    background-color: transparent; 
 
     fa-icon {
       margin-right: 10px;
     }
 
     &.google-btn {
-      background-color: #db4437;
-      color: white;
+      color: gray; 
+      border-color: #7EC4EC; 
 
       &:hover {
-        background-color: darken(#db4437, 10%);
+        background-color: rgba(219, 68, 55, 0.1); 
       }
     }
 
     &.facebook-btn {
-      background-color: #1877f2;
-      color: white;
+      color: gray; 
+      border-color: #7EC4EC;
 
       &:hover {
-        background-color: darken(#1877f2, 10%);
+        background-color: rgba(24, 119, 242, 0.1); 
       }
-    }
-  }
-}
-
-.sign-up-link {
-  text-align: center;
-  margin-top: 20px;
-
-  a {
-    color: #725EF2;
-    text-decoration: none;
-    font-weight: bold;
-
-    &:hover {
-      text-decoration: underline;
     }
   }
 }
